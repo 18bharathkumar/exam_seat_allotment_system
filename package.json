@@ -1,4 +1,4 @@
-{
+{ "homepage": "https://github.com/18bharathkumar/exam_seat_allotment_system",
   "name": "seat-allotment-system",
   "version": "0.1.0",
   "private": true,
@@ -18,7 +18,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -39,6 +40,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^6.1.1",
     "tailwindcss": "^3.4.11"
   }
 }
