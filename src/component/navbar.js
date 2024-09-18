@@ -8,7 +8,7 @@ import Home from './Home';
 
 export default function App() {
   return (
-    <Router>
+    <Router basename="/exam_seat_allotment_system">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
