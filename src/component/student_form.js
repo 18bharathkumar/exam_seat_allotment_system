@@ -1,28 +1,43 @@
 export default function Student_Form() {
   return (
     <>
-    <div className="w-full flex justify-center mt-4">
-  <div className="sm:max-w-lg max-w-72 bg-blue-50 overflow-hidden rounded-2xl text-black">
-    <form className="flex flex-col p-8 gap-4 text-center">
-      <span className="text-base text-gray-500 font-semibold"> Enter the Below Detailes to get Seat allotment Detailes</span>
-      <div className="bg-white rounded-lg mt-4 mb-2 w-full shadow-md">
-        <select className="text-gray-400 font-bold rounded-md p-2 w-full" id="subject1">
-          <option value="subject1">Subject Code</option>
-          <option value="subject2">subject2</option>
-          <option value="subject3">subject3</option>
-        </select>
-        <input 
-          type="email" 
-          className="w-full h-10 px-4 py-2 focus:outline-none border-t border-gray-300 border-b font-semibold"
-          placeholder="USN" 
+      <div className="w-full flex justify-center mt-6 px-4">
+  <div className="sm:max-w-lg max-w-full bg-white overflow-hidden rounded-2xl text-black shadow-lg">
+    <form className="flex flex-col p-6 gap-6">
+      <span className="text-lg text-gray-600 font-bold">
+        Enter the Below Details to Get Seat Allotment Details
+      </span>
+
+      <div className="bg-white rounded-lg p-4 shadow-md space-y-4">
+        <input
+          type="email"
+          className="w-full h-12 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          placeholder="USN"
         />
-        <select className="text-gray-400 font-bold border-0 rounded-md p-2 w-full" id="subject2">
-          <option value="subject1">Branch</option>
-          <option value="subject2">subject2</option>
-          <option value="subject3">subject3</option>
+
+        <select
+          className="text-gray-500 font-semibold rounded-md p-3 w-full border border-gray-200 focus:ring-2 focus:ring-blue-500"
+        >
+          <option value="subject code">Subject Code</option>
+          <option value="BECS301">BECS301</option>
+          <option value="BECS302">BECS302</option>
+          <option value="BECS303">BECS303</option>
+          <option value="BECS304">BECS304</option>
+          <option value="BECS305">BECS305</option>
+        </select>
+
+        <hr className="border-gray-300" />
+
+        <select
+          className="text-gray-500 font-semibold rounded-md p-3 w-full border border-gray-200 focus:ring-2 focus:ring-blue-500"
+        >
+          <option value="Time Slot">Time Slot</option>
+          <option value="1">Morning</option>
+          <option value="2">Evening</option>
         </select>
       </div>
-      <button className="bg-blue-600 text-white rounded-full py-3 px-4 font-semibold hover:bg-blue-700 transition-colors">
+
+      <button className="bg-blue-600 text-white rounded-full py-3 px-6 font-semibold hover:bg-blue-700 transition-colors">
         Search
       </button>
     </form>
@@ -32,3 +47,4 @@ export default function Student_Form() {
     </>
   );
 }
+

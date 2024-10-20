@@ -3,12 +3,13 @@ import { BrowserRouter as Router, NavLink, Route, Routes, useNavigate } from "re
 import About from './About';
 import Student_Form from './student_form';
 import Managment_form from './managment_form';
+// import SeatAllocation from "../seatAllocation";
 import ClgName from './clgname';
 import Home from './Home';
 
 export default function App() {
   return (
-    <Router basename="/exam_seat_allotment_system">
+    <Router basename="/">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -17,6 +18,7 @@ export default function App() {
         {/* Login route where the user will enter ID and password */}
         <Route path="/login-for-seat" element={<LoginForm />} />
         <Route path="/Allot-Seat(for_mangment)" element={<Managment_form />} />
+        {/* <Route path="/alloted-seat" element={<SeatAllocation/>}/> */}
       </Routes>
     </Router>
   );
@@ -53,7 +55,7 @@ function Navbar() {
               isActive ? "pr-5 pt-1 font-bold text-blue-600" : "pr-5 pt-1"
             }
           >
-            Seat_Allotment
+            Student
           </NavLink>
 
           {/* Navigates to the login form for Allot the Seat */}
@@ -63,7 +65,7 @@ function Navbar() {
               isActive ? "pr-5 pt-1 font-bold text-blue-600" : "pr-5 pt-1"
             }
           >
-            Allot_the_Seat
+           Admin
           </NavLink>
         </ul>
       </nav>
@@ -77,9 +79,9 @@ function LoginForm() {
   const navigate = useNavigate();
 
   const users = [
-    { id: "user1", password: "pass123" },
-    { id: "user2", password: "pass456" },
-    { id: "user3", password: "pass789" },
+    { id: "Admin-01", password: "pass123" },
+    { id: "Admin-02", password: "pass456" },
+    { id: "Admin-03", password: "pass789" },
   ];
 
   const handleSubmit = (e) => {
